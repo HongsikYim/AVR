@@ -1,0 +1,757 @@
+
+20180911_practice.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000007e  00800100  000003a0  00000414  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000003a0  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000492  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000004c4  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000148  00000000  00000000  00000504  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00001576  00000000  00000000  0000064c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000d42  00000000  00000000  00001bc2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000a73  00000000  00000000  00002904  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000002a4  00000000  00000000  00003378  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000637  00000000  00000000  0000361c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000912  00000000  00000000  00003c53  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 000000f8  00000000  00000000  00004565  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	58 c0       	rjmp	.+176    	; 0xb6 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	56 c0       	rjmp	.+172    	; 0xb6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	54 c0       	rjmp	.+168    	; 0xb6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	52 c0       	rjmp	.+164    	; 0xb6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	50 c0       	rjmp	.+160    	; 0xb6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	4e c0       	rjmp	.+156    	; 0xb6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	4c c0       	rjmp	.+152    	; 0xb6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	4a c0       	rjmp	.+148    	; 0xb6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	48 c0       	rjmp	.+144    	; 0xb6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	46 c0       	rjmp	.+140    	; 0xb6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	44 c0       	rjmp	.+136    	; 0xb6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	42 c0       	rjmp	.+132    	; 0xb6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	40 c0       	rjmp	.+128    	; 0xb6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	3e c0       	rjmp	.+124    	; 0xb6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	3c c0       	rjmp	.+120    	; 0xb6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	3a c0       	rjmp	.+116    	; 0xb6 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	38 c0       	rjmp	.+112    	; 0xb6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	36 c0       	rjmp	.+108    	; 0xb6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	34 c0       	rjmp	.+104    	; 0xb6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	32 c0       	rjmp	.+100    	; 0xb6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	30 c0       	rjmp	.+96     	; 0xb6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	2e c0       	rjmp	.+92     	; 0xb6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	2c c0       	rjmp	.+88     	; 0xb6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	2a c0       	rjmp	.+84     	; 0xb6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	28 c0       	rjmp	.+80     	; 0xb6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	26 c0       	rjmp	.+76     	; 0xb6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	24 c0       	rjmp	.+72     	; 0xb6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	22 c0       	rjmp	.+68     	; 0xb6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	20 c0       	rjmp	.+64     	; 0xb6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	1e c0       	rjmp	.+60     	; 0xb6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	1c c0       	rjmp	.+56     	; 0xb6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	1a c0       	rjmp	.+52     	; 0xb6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	18 c0       	rjmp	.+48     	; 0xb6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	16 c0       	rjmp	.+44     	; 0xb6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	e0 ea       	ldi	r30, 0xA0	; 160
+  a0:	f3 e0       	ldi	r31, 0x03	; 3
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	ae 37       	cpi	r26, 0x7E	; 126
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+  b2:	1a d1       	rcall	.+564    	; 0x2e8 <main>
+  b4:	73 c1       	rjmp	.+742    	; 0x39c <_exit>
+
+000000b6 <__bad_interrupt>:
+  b6:	a4 cf       	rjmp	.-184    	; 0x0 <__vectors>
+
+000000b8 <I2C_init>:
+
+//#define START 0x08
+//#define SLA_W (0x27<<1)
+
+void I2C_init(unsigned int baud){
+	TWBR = baud;
+  b8:	80 93 70 00 	sts	0x0070, r24	; 0x800070 <__TEXT_REGION_LENGTH__+0x7e0070>
+  bc:	08 95       	ret
+
+000000be <I2C_start>:
+}
+
+void I2C_start(void)
+{
+	TWCR = (1<<TWINT) | (1<<TWSTA) | (1<<TWEN);
+  be:	84 ea       	ldi	r24, 0xA4	; 164
+  c0:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+	while (!(TWCR & (1<<TWINT)));  // 시작 완료 대기
+  c4:	e4 e7       	ldi	r30, 0x74	; 116
+  c6:	f0 e0       	ldi	r31, 0x00	; 0
+  c8:	80 81       	ld	r24, Z
+  ca:	88 23       	and	r24, r24
+  cc:	ec f7       	brge	.-6      	; 0xc8 <I2C_start+0xa>
+}
+  ce:	08 95       	ret
+
+000000d0 <I2C_transmit>:
+
+void I2C_transmit(uint8_t data)
+{
+	TWDR = data;
+  d0:	80 93 73 00 	sts	0x0073, r24	; 0x800073 <__TEXT_REGION_LENGTH__+0x7e0073>
+	TWCR = (1<<TWINT) | (1<<TWEN);
+  d4:	84 e8       	ldi	r24, 0x84	; 132
+  d6:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+	while (!(TWCR & (1<<TWINT)));
+  da:	e4 e7       	ldi	r30, 0x74	; 116
+  dc:	f0 e0       	ldi	r31, 0x00	; 0
+  de:	80 81       	ld	r24, Z
+  e0:	88 23       	and	r24, r24
+  e2:	ec f7       	brge	.-6      	; 0xde <I2C_transmit+0xe>
+}
+  e4:	08 95       	ret
+
+000000e6 <I2C_write_byte>:
+
+void I2C_write_byte(uint8_t address, uint8_t data)
+{
+  e6:	cf 93       	push	r28
+  e8:	df 93       	push	r29
+  ea:	d8 2f       	mov	r29, r24
+  ec:	c6 2f       	mov	r28, r22
+	I2C_start();
+  ee:	e7 df       	rcall	.-50     	; 0xbe <I2C_start>
+	I2C_transmit(address);
+  f0:	8d 2f       	mov	r24, r29
+  f2:	ee df       	rcall	.-36     	; 0xd0 <I2C_transmit>
+	I2C_transmit(data);
+  f4:	8c 2f       	mov	r24, r28
+  f6:	ec df       	rcall	.-40     	; 0xd0 <I2C_transmit>
+  f8:	84 e9       	ldi	r24, 0x94	; 148
+	I2C_stop();
+}
+
+void I2C_stop(void)
+{
+	TWCR = (1<<TWINT)|(1<<TWEN)| (1<<TWSTO);
+  fa:	80 93 74 00 	sts	0x0074, r24	; 0x800074 <__TEXT_REGION_LENGTH__+0x7e0074>
+  fe:	df 91       	pop	r29
+{
+	I2C_start();
+	I2C_transmit(address);
+	I2C_transmit(data);
+	I2C_stop();
+}
+ 100:	cf 91       	pop	r28
+ 102:	08 95       	ret
+
+00000104 <I2C_LCD_write_data>:
+ 104:	ef 92       	push	r14
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 106:	ff 92       	push	r15
+ 108:	0f 93       	push	r16
+ 10a:	1f 93       	push	r17
+ 10c:	cf 93       	push	r28
+ 10e:	df 93       	push	r29
+ 110:	00 d0       	rcall	.+0      	; 0x112 <I2C_LCD_write_data+0xe>
+ 112:	00 d0       	rcall	.+0      	; 0x114 <I2C_LCD_write_data+0x10>
+ 114:	cd b7       	in	r28, 0x3d	; 61
+ 116:	de b7       	in	r29, 0x3e	; 62
+ 118:	28 2f       	mov	r18, r24
+ 11a:	20 7f       	andi	r18, 0xF0	; 240
+ 11c:	30 e1       	ldi	r19, 0x10	; 16
+ 11e:	83 9f       	mul	r24, r19
+ 120:	c0 01       	movw	r24, r0
+ 122:	11 24       	eor	r1, r1
+ 124:	92 2f       	mov	r25, r18
+ 126:	9d 60       	ori	r25, 0x0D	; 13
+ 128:	99 83       	std	Y+1, r25	; 0x01
+ 12a:	29 60       	ori	r18, 0x09	; 9
+ 12c:	2a 83       	std	Y+2, r18	; 0x02
+ 12e:	98 2f       	mov	r25, r24
+ 130:	9d 60       	ori	r25, 0x0D	; 13
+ 132:	9b 83       	std	Y+3, r25	; 0x03
+ 134:	89 60       	ori	r24, 0x09	; 9
+ 136:	8c 83       	std	Y+4, r24	; 0x04
+ 138:	8e 01       	movw	r16, r28
+ 13a:	0f 5f       	subi	r16, 0xFF	; 255
+ 13c:	1f 4f       	sbci	r17, 0xFF	; 255
+ 13e:	7e 01       	movw	r14, r28
+ 140:	85 e0       	ldi	r24, 0x05	; 5
+ 142:	e8 0e       	add	r14, r24
+ 144:	f1 1c       	adc	r15, r1
+ 146:	f8 01       	movw	r30, r16
+ 148:	61 91       	ld	r22, Z+
+ 14a:	8f 01       	movw	r16, r30
+ 14c:	8e e4       	ldi	r24, 0x4E	; 78
+ 14e:	cb df       	rcall	.-106    	; 0xe6 <I2C_write_byte>
+ 150:	0e 15       	cp	r16, r14
+ 152:	1f 05       	cpc	r17, r15
+ 154:	c1 f7       	brne	.-16     	; 0x146 <I2C_LCD_write_data+0x42>
+ 156:	0f 90       	pop	r0
+ 158:	0f 90       	pop	r0
+ 15a:	0f 90       	pop	r0
+ 15c:	0f 90       	pop	r0
+ 15e:	df 91       	pop	r29
+ 160:	cf 91       	pop	r28
+ 162:	1f 91       	pop	r17
+ 164:	0f 91       	pop	r16
+ 166:	ff 90       	pop	r15
+ 168:	ef 90       	pop	r14
+ 16a:	08 95       	ret
+
+0000016c <I2C_LCD_write_command>:
+ 16c:	ef 92       	push	r14
+ 16e:	ff 92       	push	r15
+ 170:	0f 93       	push	r16
+ 172:	1f 93       	push	r17
+ 174:	cf 93       	push	r28
+ 176:	df 93       	push	r29
+ 178:	00 d0       	rcall	.+0      	; 0x17a <I2C_LCD_write_command+0xe>
+ 17a:	00 d0       	rcall	.+0      	; 0x17c <I2C_LCD_write_command+0x10>
+ 17c:	cd b7       	in	r28, 0x3d	; 61
+ 17e:	de b7       	in	r29, 0x3e	; 62
+ 180:	28 2f       	mov	r18, r24
+ 182:	20 7f       	andi	r18, 0xF0	; 240
+ 184:	30 e1       	ldi	r19, 0x10	; 16
+ 186:	83 9f       	mul	r24, r19
+ 188:	c0 01       	movw	r24, r0
+ 18a:	11 24       	eor	r1, r1
+ 18c:	92 2f       	mov	r25, r18
+ 18e:	9c 60       	ori	r25, 0x0C	; 12
+ 190:	99 83       	std	Y+1, r25	; 0x01
+ 192:	28 60       	ori	r18, 0x08	; 8
+ 194:	2a 83       	std	Y+2, r18	; 0x02
+ 196:	98 2f       	mov	r25, r24
+ 198:	9c 60       	ori	r25, 0x0C	; 12
+ 19a:	9b 83       	std	Y+3, r25	; 0x03
+ 19c:	88 60       	ori	r24, 0x08	; 8
+ 19e:	8c 83       	std	Y+4, r24	; 0x04
+ 1a0:	8e 01       	movw	r16, r28
+ 1a2:	0f 5f       	subi	r16, 0xFF	; 255
+ 1a4:	1f 4f       	sbci	r17, 0xFF	; 255
+ 1a6:	7e 01       	movw	r14, r28
+ 1a8:	85 e0       	ldi	r24, 0x05	; 5
+ 1aa:	e8 0e       	add	r14, r24
+ 1ac:	f1 1c       	adc	r15, r1
+ 1ae:	f8 01       	movw	r30, r16
+ 1b0:	61 91       	ld	r22, Z+
+ 1b2:	8f 01       	movw	r16, r30
+ 1b4:	8e e4       	ldi	r24, 0x4E	; 78
+ 1b6:	97 df       	rcall	.-210    	; 0xe6 <I2C_write_byte>
+ 1b8:	0e 15       	cp	r16, r14
+ 1ba:	1f 05       	cpc	r17, r15
+ 1bc:	c1 f7       	brne	.-16     	; 0x1ae <I2C_LCD_write_command+0x42>
+ 1be:	0f 90       	pop	r0
+ 1c0:	0f 90       	pop	r0
+ 1c2:	0f 90       	pop	r0
+ 1c4:	0f 90       	pop	r0
+ 1c6:	df 91       	pop	r29
+ 1c8:	cf 91       	pop	r28
+ 1ca:	1f 91       	pop	r17
+ 1cc:	0f 91       	pop	r16
+ 1ce:	ff 90       	pop	r15
+ 1d0:	ef 90       	pop	r14
+ 1d2:	08 95       	ret
+
+000001d4 <I2C_LCD_init>:
+	_delay_ms(2);
+}
+
+void I2C_LCD_init(void)
+{
+	I2C_init(10000);
+ 1d4:	80 e1       	ldi	r24, 0x10	; 16
+ 1d6:	97 e2       	ldi	r25, 0x27	; 39
+ 1d8:	6f df       	rcall	.-290    	; 0xb8 <I2C_init>
+ 1da:	2f ef       	ldi	r18, 0xFF	; 255
+ 1dc:	80 e7       	ldi	r24, 0x70	; 112
+ 1de:	92 e0       	ldi	r25, 0x02	; 2
+ 1e0:	21 50       	subi	r18, 0x01	; 1
+ 1e2:	80 40       	sbci	r24, 0x00	; 0
+ 1e4:	90 40       	sbci	r25, 0x00	; 0
+ 1e6:	e1 f7       	brne	.-8      	; 0x1e0 <I2C_LCD_init+0xc>
+ 1e8:	00 c0       	rjmp	.+0      	; 0x1ea <I2C_LCD_init+0x16>
+ 1ea:	00 00       	nop
+	_delay_ms(50);
+	//Initialization of HD44780-based LCD (4-bit HW)
+	I2C_LCD_write_command(0x33);
+ 1ec:	83 e3       	ldi	r24, 0x33	; 51
+ 1ee:	be df       	rcall	.-132    	; 0x16c <I2C_LCD_write_command>
+	I2C_LCD_write_command(0x32);
+ 1f0:	82 e3       	ldi	r24, 0x32	; 50
+ 1f2:	bc df       	rcall	.-136    	; 0x16c <I2C_LCD_write_command>
+	I2C_LCD_write_command(0x28);   //Function Set 4-bit mode
+ 1f4:	88 e2       	ldi	r24, 0x28	; 40
+ 1f6:	ba df       	rcall	.-140    	; 0x16c <I2C_LCD_write_command>
+	I2C_LCD_write_command(0x0c);   //Display On/Off Control
+ 1f8:	8c e0       	ldi	r24, 0x0C	; 12
+ 1fa:	b8 df       	rcall	.-144    	; 0x16c <I2C_LCD_write_command>
+	I2C_LCD_write_command(0x06);   //Entry mode set
+ 1fc:	86 e0       	ldi	r24, 0x06	; 6
+ 1fe:	b6 df       	rcall	.-148    	; 0x16c <I2C_LCD_write_command>
+ 200:	81 e0       	ldi	r24, 0x01	; 1
+	I2C_LCD_write_command(0x01);   //Clear Display
+ 202:	b4 df       	rcall	.-152    	; 0x16c <I2C_LCD_write_command>
+ 204:	8f e3       	ldi	r24, 0x3F	; 63
+ 206:	9c e9       	ldi	r25, 0x9C	; 156
+ 208:	01 97       	sbiw	r24, 0x01	; 1
+ 20a:	f1 f7       	brne	.-4      	; 0x208 <I2C_LCD_init+0x34>
+ 20c:	00 c0       	rjmp	.+0      	; 0x20e <I2C_LCD_init+0x3a>
+ 20e:	00 00       	nop
+ 210:	08 95       	ret
+
+00000212 <I2C_LCD_write_string>:
+ 212:	0f 93       	push	r16
+ 214:	1f 93       	push	r17
+	_delay_ms(10);
+	
+}
+
+void I2C_LCD_write_string(char *string)
+{
+ 216:	cf 93       	push	r28
+ 218:	fc 01       	movw	r30, r24
+	uint8_t i;
+	for(i=0; string[i]; i++)
+ 21a:	80 81       	ld	r24, Z
+ 21c:	88 23       	and	r24, r24
+ 21e:	51 f0       	breq	.+20     	; 0x234 <I2C_LCD_write_string+0x22>
+ 220:	8f 01       	movw	r16, r30
+ 222:	c0 e0       	ldi	r28, 0x00	; 0
+	I2C_LCD_write_data(string[i]);
+ 224:	6f df       	rcall	.-290    	; 0x104 <I2C_LCD_write_data>
+}
+
+void I2C_LCD_write_string(char *string)
+{
+	uint8_t i;
+	for(i=0; string[i]; i++)
+ 226:	cf 5f       	subi	r28, 0xFF	; 255
+ 228:	f8 01       	movw	r30, r16
+ 22a:	ec 0f       	add	r30, r28
+ 22c:	f1 1d       	adc	r31, r1
+ 22e:	80 81       	ld	r24, Z
+ 230:	81 11       	cpse	r24, r1
+ 232:	f8 cf       	rjmp	.-16     	; 0x224 <I2C_LCD_write_string+0x12>
+	I2C_LCD_write_data(string[i]);
+}
+ 234:	cf 91       	pop	r28
+ 236:	1f 91       	pop	r17
+ 238:	0f 91       	pop	r16
+ 23a:	08 95       	ret
+
+0000023c <I2C_LCD_goto_XY>:
+	row %= 2;
+	
+	uint8_t address = (0x40 * row) + col;
+	uint8_t command = 0x80 + address;
+	
+	I2C_LCD_write_command(command);
+ 23c:	81 70       	andi	r24, 0x01	; 1
+ 23e:	6f 70       	andi	r22, 0x0F	; 15
+ 240:	90 e4       	ldi	r25, 0x40	; 64
+ 242:	89 9f       	mul	r24, r25
+ 244:	60 0d       	add	r22, r0
+ 246:	11 24       	eor	r1, r1
+ 248:	86 2f       	mov	r24, r22
+ 24a:	80 58       	subi	r24, 0x80	; 128
+ 24c:	8f cf       	rjmp	.-226    	; 0x16c <I2C_LCD_write_command>
+ 24e:	08 95       	ret
+
+00000250 <I2C_LCD_write_string_XY>:
+}
+
+void I2C_LCD_write_string_XY(uint8_t row, uint8_t col, char *string)
+{
+ 250:	cf 93       	push	r28
+ 252:	df 93       	push	r29
+ 254:	ea 01       	movw	r28, r20
+	I2C_LCD_goto_XY(row, col);
+ 256:	f2 df       	rcall	.-28     	; 0x23c <I2C_LCD_goto_XY>
+	I2C_LCD_write_string(string);
+ 258:	ce 01       	movw	r24, r28
+ 25a:	db df       	rcall	.-74     	; 0x212 <I2C_LCD_write_string>
+ 25c:	df 91       	pop	r29
+ 25e:	cf 91       	pop	r28
+ 260:	08 95       	ret
+
+00000262 <ledinit>:
+#include <util/delay.h>
+#include "led_control.h"
+
+void ledinit(void)
+{
+	LED_DDR = 0xff;
+ 262:	8f ef       	ldi	r24, 0xFF	; 255
+ 264:	84 bb       	out	0x14, r24	; 20
+ 266:	08 95       	ret
+
+00000268 <ledoff>:
+}
+
+void ledoff(void)
+{
+	LED_PORT = 0xff;
+ 268:	8f ef       	ldi	r24, 0xFF	; 255
+ 26a:	85 bb       	out	0x15, r24	; 21
+	I2C_LCD_write_string_XY(0, 0, "LED OFF      ");
+ 26c:	40 e0       	ldi	r20, 0x00	; 0
+ 26e:	51 e0       	ldi	r21, 0x01	; 1
+ 270:	60 e0       	ldi	r22, 0x00	; 0
+ 272:	70 e0       	ldi	r23, 0x00	; 0
+ 274:	80 e0       	ldi	r24, 0x00	; 0
+ 276:	90 e0       	ldi	r25, 0x00	; 0
+ 278:	eb cf       	rjmp	.-42     	; 0x250 <I2C_LCD_write_string_XY>
+ 27a:	08 95       	ret
+
+0000027c <ledon>:
+}
+
+void ledon(void)
+{
+	LED_PORT = 0x00;
+ 27c:	15 ba       	out	0x15, r1	; 21
+	I2C_LCD_write_string_XY(0, 0, "LED ON       ");
+ 27e:	4e e0       	ldi	r20, 0x0E	; 14
+ 280:	51 e0       	ldi	r21, 0x01	; 1
+ 282:	60 e0       	ldi	r22, 0x00	; 0
+ 284:	70 e0       	ldi	r23, 0x00	; 0
+ 286:	80 e0       	ldi	r24, 0x00	; 0
+ 288:	90 e0       	ldi	r25, 0x00	; 0
+ 28a:	e2 cf       	rjmp	.-60     	; 0x250 <I2C_LCD_write_string_XY>
+ 28c:	08 95       	ret
+
+0000028e <ledblink>:
+}
+
+void ledblink(void)
+{
+	LED_PORT = 0x00;
+ 28e:	15 ba       	out	0x15, r1	; 21
+ 290:	2f ef       	ldi	r18, 0xFF	; 255
+ 292:	81 ee       	ldi	r24, 0xE1	; 225
+ 294:	94 e0       	ldi	r25, 0x04	; 4
+ 296:	21 50       	subi	r18, 0x01	; 1
+ 298:	80 40       	sbci	r24, 0x00	; 0
+ 29a:	90 40       	sbci	r25, 0x00	; 0
+ 29c:	e1 f7       	brne	.-8      	; 0x296 <ledblink+0x8>
+ 29e:	00 c0       	rjmp	.+0      	; 0x2a0 <ledblink+0x12>
+ 2a0:	00 00       	nop
+	_delay_ms(100);
+	LED_PORT = 0xff;
+ 2a2:	8f ef       	ldi	r24, 0xFF	; 255
+ 2a4:	85 bb       	out	0x15, r24	; 21
+ 2a6:	2f ef       	ldi	r18, 0xFF	; 255
+ 2a8:	81 ee       	ldi	r24, 0xE1	; 225
+ 2aa:	94 e0       	ldi	r25, 0x04	; 4
+ 2ac:	21 50       	subi	r18, 0x01	; 1
+ 2ae:	80 40       	sbci	r24, 0x00	; 0
+ 2b0:	90 40       	sbci	r25, 0x00	; 0
+ 2b2:	e1 f7       	brne	.-8      	; 0x2ac <ledblink+0x1e>
+ 2b4:	00 c0       	rjmp	.+0      	; 0x2b6 <ledblink+0x28>
+ 2b6:	00 00       	nop
+	_delay_ms(100);
+	I2C_LCD_write_string_XY(0, 0, "LED BLINK    ");
+ 2b8:	4c e1       	ldi	r20, 0x1C	; 28
+ 2ba:	51 e0       	ldi	r21, 0x01	; 1
+ 2bc:	60 e0       	ldi	r22, 0x00	; 0
+ 2be:	70 e0       	ldi	r23, 0x00	; 0
+ 2c0:	80 e0       	ldi	r24, 0x00	; 0
+ 2c2:	90 e0       	ldi	r25, 0x00	; 0
+ 2c4:	c5 cf       	rjmp	.-118    	; 0x250 <I2C_LCD_write_string_XY>
+ 2c6:	08 95       	ret
+
+000002c8 <menu>:
+FILE OUTPUT = FDEV_SETUP_STREAM(UART0_transmit, NULL, _FDEV_SETUP_WRITE);
+FILE INPUT = FDEV_SETUP_STREAM(NULL, UART0_receive, _FDEV_SETUP_READ);
+
+void menu(void)
+{
+	UART0_print_string("\r\n");
+ 2c8:	8d e4       	ldi	r24, 0x4D	; 77
+ 2ca:	91 e0       	ldi	r25, 0x01	; 1
+ 2cc:	54 d0       	rcall	.+168    	; 0x376 <UART0_print_string>
+	UART0_print_string("1. LED OFF\r\n");
+ 2ce:	83 e4       	ldi	r24, 0x43	; 67
+ 2d0:	91 e0       	ldi	r25, 0x01	; 1
+ 2d2:	51 d0       	rcall	.+162    	; 0x376 <UART0_print_string>
+	UART0_print_string("2. LED ON\r\n");
+ 2d4:	89 e5       	ldi	r24, 0x59	; 89
+ 2d6:	91 e0       	ldi	r25, 0x01	; 1
+ 2d8:	4e d0       	rcall	.+156    	; 0x376 <UART0_print_string>
+	UART0_print_string("3. LED BLINK\r\n");
+ 2da:	8e e6       	ldi	r24, 0x6E	; 110
+ 2dc:	91 e0       	ldi	r25, 0x01	; 1
+ 2de:	4b d0       	rcall	.+150    	; 0x376 <UART0_print_string>
+	UART0_print_string("> ");
+ 2e0:	8a e2       	ldi	r24, 0x2A	; 42
+ 2e2:	91 e0       	ldi	r25, 0x01	; 1
+ 2e4:	48 c0       	rjmp	.+144    	; 0x376 <UART0_print_string>
+ 2e6:	08 95       	ret
+
+000002e8 <main>:
+ 2e8:	75 df       	rcall	.-278    	; 0x1d4 <I2C_LCD_init>
+int main(void)
+{
+	uint8_t select_menu=0, states=0;
+	
+	I2C_LCD_init();
+	UART0_init();   //보레이트 9600
+ 2ea:	30 d0       	rcall	.+96     	; 0x34c <UART0_init>
+	ledinit();
+ 2ec:	ba df       	rcall	.-140    	; 0x262 <ledinit>
+ 2ee:	4d e2       	ldi	r20, 0x2D	; 45
+	
+	I2C_LCD_write_string_XY(0, 0, "hello world!");
+ 2f0:	51 e0       	ldi	r21, 0x01	; 1
+ 2f2:	60 e0       	ldi	r22, 0x00	; 0
+ 2f4:	80 e0       	ldi	r24, 0x00	; 0
+ 2f6:	ac df       	rcall	.-168    	; 0x250 <I2C_LCD_write_string_XY>
+	
+	menu();
+ 2f8:	e7 df       	rcall	.-50     	; 0x2c8 <menu>
+	states = LED_OFF;
+ 2fa:	c1 e0       	ldi	r28, 0x01	; 1
+				case '1':
+				states = LED_OFF;
+				UART0_print_string("Selected 1. LED OFF\r\n");
+				break;
+				case '2':
+				states = LED_ON;
+ 2fc:	02 e0       	ldi	r16, 0x02	; 2
+		{
+			select_menu = UART0_receive();
+			switch(select_menu)
+			{
+				case '1':
+				states = LED_OFF;
+ 2fe:	13 e0       	ldi	r17, 0x03	; 3
+	menu();
+	states = LED_OFF;
+	
+	while (1)
+	{
+		if (UART0_rx_check())
+ 300:	d1 e0       	ldi	r29, 0x01	; 1
+ 302:	47 d0       	rcall	.+142    	; 0x392 <UART0_rx_check>
+ 304:	88 23       	and	r24, r24
+ 306:	b1 f0       	breq	.+44     	; 0x334 <main+0x4c>
+		{
+			select_menu = UART0_receive();
+ 308:	32 d0       	rcall	.+100    	; 0x36e <UART0_receive>
+ 30a:	82 33       	cpi	r24, 0x32	; 50
+			switch(select_menu)
+ 30c:	49 f0       	breq	.+18     	; 0x320 <main+0x38>
+ 30e:	83 33       	cpi	r24, 0x33	; 51
+ 310:	61 f0       	breq	.+24     	; 0x32a <main+0x42>
+ 312:	81 33       	cpi	r24, 0x31	; 49
+ 314:	71 f4       	brne	.+28     	; 0x332 <main+0x4a>
+			{
+				case '1':
+				states = LED_OFF;
+				UART0_print_string("Selected 1. LED OFF\r\n");
+ 316:	8a e3       	ldi	r24, 0x3A	; 58
+ 318:	91 e0       	ldi	r25, 0x01	; 1
+ 31a:	2d d0       	rcall	.+90     	; 0x376 <UART0_print_string>
+		{
+			select_menu = UART0_receive();
+			switch(select_menu)
+			{
+				case '1':
+				states = LED_OFF;
+ 31c:	cd 2f       	mov	r28, r29
+				UART0_print_string("Selected 1. LED OFF\r\n");
+				break;
+				case '2':
+				states = LED_ON;
+				UART0_print_string("Selected 2. LED ON\r\n");
+ 31e:	09 c0       	rjmp	.+18     	; 0x332 <main+0x4a>
+ 320:	80 e5       	ldi	r24, 0x50	; 80
+ 322:	91 e0       	ldi	r25, 0x01	; 1
+				case '1':
+				states = LED_OFF;
+				UART0_print_string("Selected 1. LED OFF\r\n");
+				break;
+				case '2':
+				states = LED_ON;
+ 324:	28 d0       	rcall	.+80     	; 0x376 <UART0_print_string>
+				UART0_print_string("Selected 2. LED ON\r\n");
+				break;
+ 326:	c0 2f       	mov	r28, r16
+				case '3':
+				states = LED_BLINK;
+				UART0_print_string("Selected 3. LED BLINK\r\n");
+ 328:	04 c0       	rjmp	.+8      	; 0x332 <main+0x4a>
+ 32a:	85 e6       	ldi	r24, 0x65	; 101
+ 32c:	91 e0       	ldi	r25, 0x01	; 1
+				break;
+				default:
+				break;
+			}
+			menu();
+ 32e:	23 d0       	rcall	.+70     	; 0x376 <UART0_print_string>
+		}
+		
+		switch(states)
+ 330:	c1 2f       	mov	r28, r17
+ 332:	ca df       	rcall	.-108    	; 0x2c8 <menu>
+ 334:	c2 30       	cpi	r28, 0x02	; 2
+ 336:	31 f0       	breq	.+12     	; 0x344 <main+0x5c>
+ 338:	c3 30       	cpi	r28, 0x03	; 3
+ 33a:	31 f0       	breq	.+12     	; 0x348 <main+0x60>
+		{
+			case LED_OFF:
+			ledoff();
+ 33c:	c1 30       	cpi	r28, 0x01	; 1
+ 33e:	09 f7       	brne	.-62     	; 0x302 <main+0x1a>
+			break;
+ 340:	93 df       	rcall	.-218    	; 0x268 <ledoff>
+			case LED_ON:
+			ledon();
+ 342:	df cf       	rjmp	.-66     	; 0x302 <main+0x1a>
+ 344:	9b df       	rcall	.-202    	; 0x27c <ledon>
+			break;
+ 346:	dd cf       	rjmp	.-70     	; 0x302 <main+0x1a>
+			case LED_BLINK:
+			ledblink();
+ 348:	a2 df       	rcall	.-188    	; 0x28e <ledblink>
+ 34a:	db cf       	rjmp	.-74     	; 0x302 <main+0x1a>
+
+0000034c <UART0_init>:
+			break;
+ 34c:	10 92 90 00 	sts	0x0090, r1	; 0x800090 <__TEXT_REGION_LENGTH__+0x7e0090>
+	}
+	for(i = index; i >= 0; i--)
+	{
+		UART0_transmit(numString[i]);
+	}
+}
+ 350:	8f ec       	ldi	r24, 0xCF	; 207
+ 352:	89 b9       	out	0x09, r24	; 9
+ 354:	59 9a       	sbi	0x0b, 1	; 11
+ 356:	e5 e9       	ldi	r30, 0x95	; 149
+ 358:	f0 e0       	ldi	r31, 0x00	; 0
+ 35a:	80 81       	ld	r24, Z
+ 35c:	86 60       	ori	r24, 0x06	; 6
+ 35e:	80 83       	st	Z, r24
+ 360:	54 9a       	sbi	0x0a, 4	; 10
+ 362:	53 9a       	sbi	0x0a, 3	; 10
+ 364:	08 95       	ret
+
+00000366 <UART0_transmit>:
+ 366:	5d 9b       	sbis	0x0b, 5	; 11
+ 368:	fe cf       	rjmp	.-4      	; 0x366 <UART0_transmit>
+ 36a:	8c b9       	out	0x0c, r24	; 12
+ 36c:	08 95       	ret
+
+0000036e <UART0_receive>:
+ 36e:	5f 9b       	sbis	0x0b, 7	; 11
+ 370:	fe cf       	rjmp	.-4      	; 0x36e <UART0_receive>
+ 372:	8c b1       	in	r24, 0x0c	; 12
+ 374:	08 95       	ret
+
+00000376 <UART0_print_string>:
+ 376:	cf 93       	push	r28
+ 378:	df 93       	push	r29
+ 37a:	ec 01       	movw	r28, r24
+ 37c:	88 81       	ld	r24, Y
+ 37e:	88 23       	and	r24, r24
+ 380:	29 f0       	breq	.+10     	; 0x38c <UART0_print_string+0x16>
+ 382:	21 96       	adiw	r28, 0x01	; 1
+ 384:	f0 df       	rcall	.-32     	; 0x366 <UART0_transmit>
+ 386:	89 91       	ld	r24, Y+
+ 388:	81 11       	cpse	r24, r1
+ 38a:	fc cf       	rjmp	.-8      	; 0x384 <UART0_print_string+0xe>
+ 38c:	df 91       	pop	r29
+ 38e:	cf 91       	pop	r28
+ 390:	08 95       	ret
+
+00000392 <UART0_rx_check>:
+
+uint8_t UART0_rx_check(void)
+{
+	if( UCSR0A & (1<<RXC0) )	// 데이터 수신 대기
+ 392:	8b b1       	in	r24, 0x0b	; 11
+	return 1;
+	else
+	return 0;
+ 394:	88 1f       	adc	r24, r24
+ 396:	88 27       	eor	r24, r24
+ 398:	88 1f       	adc	r24, r24
+ 39a:	08 95       	ret
+
+0000039c <_exit>:
+ 39c:	f8 94       	cli
+
+0000039e <__stop_program>:
+ 39e:	ff cf       	rjmp	.-2      	; 0x39e <__stop_program>

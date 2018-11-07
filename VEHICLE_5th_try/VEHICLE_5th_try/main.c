@@ -1,0 +1,54 @@
+/*
+ * VEHICLE_5th_try.c
+ *
+ * Created: 2018-10-11 오후 5:59:20
+ * Author : kccistc
+ */ 
+
+#include "AllofLibrary.h"
+#include "UART0.h"
+#include "MOTOR.h"
+#include "ULTRASONIC.h"
+#include "DRIVING_MANUAL_MODE.h"
+#include "STEP_MOTOR.h"
+
+FILE OUTPUT = FDEV_SETUP_STREAM(UART0_transmit, NULL, _FDEV_SETUP_WRITE);
+FILE INPUT = FDEV_SETUP_STREAM(NULL, UART0_receive, _FDEV_SETUP_READ);
+
+
+void BLUETOOTH_conection();
+
+int main(void)
+{
+	//uint8_t distance_1, distance_2;
+	
+	stdout = &OUTPUT;
+	stdin = &INPUT;
+	
+	UART0_init();   //보레이트 9600
+	INIT_PORT_4_MOTOR();
+	INIT_INTERRUPT_4_MOTOR();
+	INTIT_4_ULTRASONIC();
+	INIT_MANUAL_MODE();
+	
+	//SELECTE_DIRECTION();
+	
+	
+	while (1)
+	{
+		
+		//distance_1 = measure_distance_1();
+		//distance_2 = measure_distance_2();
+		
+		//printf("distance1: %d cm  \r\n", distance_1);
+		//printf("distance2: %d cm  \r\n", distance_2);
+		
+		
+		MANUAL_MODE();
+	}
+}
+
+void BLUETOOTH_conection(void)
+{
+	uint8_t data_4_bluetooth;
+}

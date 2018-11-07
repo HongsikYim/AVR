@@ -1,0 +1,229 @@
+
+20180919_practce_git.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000172  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000011e  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  00000172  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000001a4  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000020  00000000  00000000  000001e4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000922  00000000  00000000  00000204  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000818  00000000  00000000  00000b26  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000002d9  00000000  00000000  0000133e  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000024  00000000  00000000  00001618  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000416  00000000  00000000  0000163c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000000c5  00000000  00000000  00001a52  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000028  00000000  00000000  00001b17  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	4b c0       	rjmp	.+150    	; 0x9c <__bad_interrupt>
+   6:	00 00       	nop
+   8:	49 c0       	rjmp	.+146    	; 0x9c <__bad_interrupt>
+   a:	00 00       	nop
+   c:	47 c0       	rjmp	.+142    	; 0x9c <__bad_interrupt>
+   e:	00 00       	nop
+  10:	45 c0       	rjmp	.+138    	; 0x9c <__bad_interrupt>
+  12:	00 00       	nop
+  14:	43 c0       	rjmp	.+134    	; 0x9c <__bad_interrupt>
+  16:	00 00       	nop
+  18:	41 c0       	rjmp	.+130    	; 0x9c <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	3f c0       	rjmp	.+126    	; 0x9c <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	3d c0       	rjmp	.+122    	; 0x9c <__bad_interrupt>
+  22:	00 00       	nop
+  24:	3b c0       	rjmp	.+118    	; 0x9c <__bad_interrupt>
+  26:	00 00       	nop
+  28:	39 c0       	rjmp	.+114    	; 0x9c <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	37 c0       	rjmp	.+110    	; 0x9c <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	35 c0       	rjmp	.+106    	; 0x9c <__bad_interrupt>
+  32:	00 00       	nop
+  34:	33 c0       	rjmp	.+102    	; 0x9c <__bad_interrupt>
+  36:	00 00       	nop
+  38:	31 c0       	rjmp	.+98     	; 0x9c <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	2f c0       	rjmp	.+94     	; 0x9c <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	2d c0       	rjmp	.+90     	; 0x9c <__bad_interrupt>
+  42:	00 00       	nop
+  44:	2b c0       	rjmp	.+86     	; 0x9c <__bad_interrupt>
+  46:	00 00       	nop
+  48:	29 c0       	rjmp	.+82     	; 0x9c <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	27 c0       	rjmp	.+78     	; 0x9c <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	25 c0       	rjmp	.+74     	; 0x9c <__bad_interrupt>
+  52:	00 00       	nop
+  54:	23 c0       	rjmp	.+70     	; 0x9c <__bad_interrupt>
+  56:	00 00       	nop
+  58:	21 c0       	rjmp	.+66     	; 0x9c <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	1f c0       	rjmp	.+62     	; 0x9c <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	1d c0       	rjmp	.+58     	; 0x9c <__bad_interrupt>
+  62:	00 00       	nop
+  64:	1b c0       	rjmp	.+54     	; 0x9c <__bad_interrupt>
+  66:	00 00       	nop
+  68:	19 c0       	rjmp	.+50     	; 0x9c <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	17 c0       	rjmp	.+46     	; 0x9c <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	15 c0       	rjmp	.+42     	; 0x9c <__bad_interrupt>
+  72:	00 00       	nop
+  74:	13 c0       	rjmp	.+38     	; 0x9c <__bad_interrupt>
+  76:	00 00       	nop
+  78:	11 c0       	rjmp	.+34     	; 0x9c <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	0f c0       	rjmp	.+30     	; 0x9c <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	0d c0       	rjmp	.+26     	; 0x9c <__bad_interrupt>
+  82:	00 00       	nop
+  84:	0b c0       	rjmp	.+22     	; 0x9c <__bad_interrupt>
+  86:	00 00       	nop
+  88:	09 c0       	rjmp	.+18     	; 0x9c <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+  98:	02 d0       	rcall	.+4      	; 0x9e <main>
+  9a:	3f c0       	rjmp	.+126    	; 0x11a <_exit>
+
+0000009c <__bad_interrupt>:
+  9c:	b1 cf       	rjmp	.-158    	; 0x0 <__vectors>
+
+0000009e <main>:
+#define SpeedMotor1(s)		OCR3B = s
+
+int main(void)
+{
+	//분주비 64, 고속 PWM
+	TCCR3A |= (1 << WGM30) | (0 << WGM31);
+  9e:	ab e8       	ldi	r26, 0x8B	; 139
+  a0:	b0 e0       	ldi	r27, 0x00	; 0
+  a2:	8c 91       	ld	r24, X
+  a4:	81 60       	ori	r24, 0x01	; 1
+  a6:	8c 93       	st	X, r24
+	TCCR3B |= (1 << WGM32) | (0 << WGM33);
+  a8:	ea e8       	ldi	r30, 0x8A	; 138
+  aa:	f0 e0       	ldi	r31, 0x00	; 0
+  ac:	80 81       	ld	r24, Z
+  ae:	88 60       	ori	r24, 0x08	; 8
+  b0:	80 83       	st	Z, r24
+	TCCR3A |= (1 << COM3B1);
+  b2:	8c 91       	ld	r24, X
+  b4:	80 62       	ori	r24, 0x20	; 32
+  b6:	8c 93       	st	X, r24
+	TCCR3B |= (0 << CS32) | (1 << CS31) | (1 << CS30);
+  b8:	80 81       	ld	r24, Z
+  ba:	83 60       	ori	r24, 0x03	; 3
+  bc:	80 83       	st	Z, r24
+	
+	OCR3B = 0;
+  be:	10 92 85 00 	sts	0x0085, r1	; 0x800085 <__TEXT_REGION_LENGTH__+0x7e0085>
+  c2:	10 92 84 00 	sts	0x0084, r1	; 0x800084 <__TEXT_REGION_LENGTH__+0x7e0084>
+	{
+		DDRE |= (1 << PE4);
+		
+		for(int i = 0; i < 256; i ++)
+		{
+			SpeedMotor1(i);
+  c6:	e4 e8       	ldi	r30, 0x84	; 132
+  c8:	f0 e0       	ldi	r31, 0x00	; 0
+	OCR3B = 0;
+	
+	/* Replace with your application code */
+	while (1)
+	{
+		DDRE |= (1 << PE4);
+  ca:	14 9a       	sbi	0x02, 4	; 2
+		
+		for(int i = 0; i < 256; i ++)
+  cc:	80 e0       	ldi	r24, 0x00	; 0
+  ce:	90 e0       	ldi	r25, 0x00	; 0
+		{
+			SpeedMotor1(i);
+  d0:	91 83       	std	Z+1, r25	; 0x01
+  d2:	80 83       	st	Z, r24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  d4:	2f e7       	ldi	r18, 0x7F	; 127
+  d6:	38 e3       	ldi	r19, 0x38	; 56
+  d8:	41 e0       	ldi	r20, 0x01	; 1
+  da:	21 50       	subi	r18, 0x01	; 1
+  dc:	30 40       	sbci	r19, 0x00	; 0
+  de:	40 40       	sbci	r20, 0x00	; 0
+  e0:	e1 f7       	brne	.-8      	; 0xda <main+0x3c>
+  e2:	00 c0       	rjmp	.+0      	; 0xe4 <main+0x46>
+  e4:	00 00       	nop
+	/* Replace with your application code */
+	while (1)
+	{
+		DDRE |= (1 << PE4);
+		
+		for(int i = 0; i < 256; i ++)
+  e6:	01 96       	adiw	r24, 0x01	; 1
+  e8:	81 15       	cp	r24, r1
+  ea:	21 e0       	ldi	r18, 0x01	; 1
+  ec:	92 07       	cpc	r25, r18
+  ee:	81 f7       	brne	.-32     	; 0xd0 <main+0x32>
+  f0:	3f ef       	ldi	r19, 0xFF	; 255
+  f2:	43 ed       	ldi	r20, 0xD3	; 211
+  f4:	80 e3       	ldi	r24, 0x30	; 48
+  f6:	31 50       	subi	r19, 0x01	; 1
+  f8:	40 40       	sbci	r20, 0x00	; 0
+  fa:	80 40       	sbci	r24, 0x00	; 0
+  fc:	e1 f7       	brne	.-8      	; 0xf6 <main+0x58>
+  fe:	00 c0       	rjmp	.+0      	; 0x100 <main+0x62>
+ 100:	00 00       	nop
+			SpeedMotor1(i);
+			_delay_ms(25);
+		}
+		_delay_ms(1000);
+		
+		SpeedMotor1(0);
+ 102:	11 82       	std	Z+1, r1	; 0x01
+ 104:	10 82       	st	Z, r1
+ 106:	9f ef       	ldi	r25, 0xFF	; 255
+ 108:	23 ed       	ldi	r18, 0xD3	; 211
+ 10a:	30 e3       	ldi	r19, 0x30	; 48
+ 10c:	91 50       	subi	r25, 0x01	; 1
+ 10e:	20 40       	sbci	r18, 0x00	; 0
+ 110:	30 40       	sbci	r19, 0x00	; 0
+ 112:	e1 f7       	brne	.-8      	; 0x10c <main+0x6e>
+ 114:	00 c0       	rjmp	.+0      	; 0x116 <main+0x78>
+ 116:	00 00       	nop
+ 118:	d8 cf       	rjmp	.-80     	; 0xca <main+0x2c>
+
+0000011a <_exit>:
+ 11a:	f8 94       	cli
+
+0000011c <__stop_program>:
+ 11c:	ff cf       	rjmp	.-2      	; 0x11c <__stop_program>
