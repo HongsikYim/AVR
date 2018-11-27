@@ -33,8 +33,8 @@ void INIT_INTERRUPT_4_MOTOR(void)
 	TCCR1B |= (0 << CS12) | (1 << CS11) | (1 << CS10);
 	
 	//초기 OCR값
-	OCR1A = 50;
-	OCR1B = 0;
+	OCR1A = 0;
+	OCR1B = 250;
 }
 
 void MOTOR_STOP(void)
